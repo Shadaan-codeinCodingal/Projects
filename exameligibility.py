@@ -7,5 +7,3 @@ if state == "not ill":
         print("You cannot enter the exam.")
 elif state == "ill":
     print("You cannot enter the exam")
-else:
-    print("Error!")
