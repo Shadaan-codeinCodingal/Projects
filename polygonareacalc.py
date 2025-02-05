@@ -15,9 +15,9 @@ class Triangle(Shapes):
 class Squares(Shapes):
   def calculate(self):
     if self.sides**2 - int(self.sides**2) == 0:
-      print("The area of a square is", int(self.sides[0]*self.sides[1])/2)
+      print("The area of a square is", int(self.sides*self.sides[1])/2)
     else:
-      print("The area of a square is", (self.sides[0]*self.sides[1])/2)
+      print("The area of a square is", (self.sides*self.sides[1])/2)
 class Rectangle(Shapes):
   def calculate(self):
     if self.sides[0]*self.sides[1] - int(self.sides[0]*self.sides[1]) == 0:
