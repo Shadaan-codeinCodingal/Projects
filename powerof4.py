@@ -1,15 +1,13 @@
-def checkpower(n):
-    count = 0
-    if n & (~(n & (n-1))):
-        while n > 1:
-            n>>=1
-            count +=1
-        if count%2==0:
-            return True
-        else:
-            return False
-num = int(input('Enter a number: '))
-if checkpower(num):
-    print(f"{num} is a power of 4.")
+def cip(n):
+    if n <= 0:
+        return False
+    if n==1:
+        return True
+    if n%4==0:
+        return cip(n//4)
+    return False
+num = int(input('enter a number: '))
+if cip(num):
+    print('This number is a power of 4.')
 else:
-    print(f"{num} is not a power of 4.")
+    print('This number is not a power of 4.')
