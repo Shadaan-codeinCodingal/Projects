@@ -1,0 +1,20 @@
+import random
+import math
+def pickball(b,r,g):
+  o = []
+  for i in range(1,b):
+     o.append('b')
+  for i in range(1,g):
+    o.append('g')
+  for i in range(1,r):
+    o.append('r')
+  outcome=random.choice(o)
+  if outcome=='r':
+    print("A red ball was selected")
+  else:
+    print("A red ball was not selected")
+  print(f"Probabillity that a red ball was selected: {round(r/math.gcd(b+r+g,r))}/{round((b+r+g)/math.gcd(b+r+g,r))}")
+blue=int(input("No. of blue balls: "))
+red=int(input("No. of red balls: "))
+green=int(input("No. of green balls: "))
+pickball(blue,red,green)
